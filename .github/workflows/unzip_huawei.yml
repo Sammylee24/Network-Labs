@@ -1,9 +1,6 @@
-name: Unzip File
+name: Unzip Huawei Projects
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -14,13 +11,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: List files in the repo root
+        run: ls -l
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies (if any)
-        run: pip install -r requirements.txt || true
-
-      - name: Run unzip script
-        run: python unzip_file.py
+      - name: Unzip Huawei Projects.zip
+        run: python unzip_huawei.py
