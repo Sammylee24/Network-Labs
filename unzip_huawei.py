@@ -1,7 +1,7 @@
 import zipfile
 import os
 
-zip_file = "Huawei Projects.zip"
+zip_file = "/Huawei Projects.zip"
 extract_to = "Huawei_Projects"
 
 if not os.path.exists(zip_file):
