@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="D5F3DCE7-6325-4007-AA53-DFF4206EBC59" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-2F-03-46" com_port="2000" bootmode="0" cx="116.000000" cy="58.000000" edit_left="102" edit_top="74">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="0A0E8D11-026A-4150-A1EA-82FBC498AA20" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-45-32-D0" com_port="2001" bootmode="0" cx="450.000000" cy="53.000000" edit_left="517" edit_top="72">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="48E31DED-7879-45e6-B202-6BA12F57EE8C" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-C7-0C-64" com_port="2002" bootmode="0" cx="291.000000" cy="358.000000" edit_left="318" edit_top="412">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="C8288A62-E7E3-4ac3-B1D4-6877C3CBA249" name="Virtual Template" poe="0" model="Cloud" settings="" system_mac="" com_port="0" bootmode="0" cx="273.500000" cy="163.500000" edit_left="404" edit_top="200">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="3" />
+                <interface sztype="Ethernet" interfacename="GE" count="0" />
+                <interface sztype="Serial" interfacename="Serial" count="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="1" remoteDisplayNo="2" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="1" remoteDisplayNo="3" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="2" remoteDisplayNo="1" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="2" remoteDisplayNo="3" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="3" remoteDisplayNo="1" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="3" remoteDisplayNo="2" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="D5F3DCE7-6325-4007-AA53-DFF4206EBC59" destDeviceID="C8288A62-E7E3-4ac3-B1D4-6877C3CBA249">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="178.387131" srcBoundRect_Y="109.750534" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="263.229614" tarBoundRect_Y="169.091232" tarOffset_X="0.000000" tarOffset_Y="-12.000000" />
+        </line>
+        <line srcDeviceID="0A0E8D11-026A-4150-A1EA-82FBC498AA20" destDeviceID="C8288A62-E7E3-4ac3-B1D4-6877C3CBA249">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="442.992554" srcBoundRect_Y="106.614510" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="0" tarBoundRect_X="366.712921" tarBoundRect_Y="166.311615" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="C8288A62-E7E3-4ac3-B1D4-6877C3CBA249" destDeviceID="48E31DED-7879-45e6-B202-6BA12F57EE8C">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="316.719482" srcBoundRect_Y="270.392944" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="317.517517" tarBoundRect_Y="341.818939" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="213" top="439" right="459" bottom="456" content="PPPoE Server and Client Topology" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="360" top="219" right="477" bottom="236" content="119.84.111.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="291" top="339" right="310" bottom="356" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

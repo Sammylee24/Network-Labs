@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="24EFB977-6768-412d-A4CE-64DC2C4F1FE9" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-B5-4D-A7" com_port="2000" bootmode="0" cx="68.000000" cy="135.000000" edit_left="95" edit_top="189">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+        <dev id="1D7CB8C0-4313-4b08-BA20-03207650E955" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-A4-70-C8" com_port="2001" bootmode="0" cx="280.000000" cy="135.000000" edit_left="307" edit_top="189">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+        <dev id="ABEFB327-DAC0-42b7-B567-17527F2C05A0" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-2B-54-E4" com_port="2002" bootmode="0" cx="494.000000" cy="135.000000" edit_left="521" edit_top="189">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="24EFB977-6768-412d-A4CE-64DC2C4F1FE9" destDeviceID="1D7CB8C0-4313-4b08-BA20-03207650E955">
+            <interfacePair lineName="Serial" srcIndex="3" srcBoundRectIsMoved="1" srcBoundRect_X="138.183762" srcBoundRect_Y="162.000000" srcOffset_X="-17.000000" srcOffset_Y="-19.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="263.816223" tarBoundRect_Y="162.000000" tarOffset_X="-42.000000" tarOffset_Y="-18.000000" />
+        </line>
+        <line srcDeviceID="1D7CB8C0-4313-4b08-BA20-03207650E955" destDeviceID="ABEFB327-DAC0-42b7-B567-17527F2C05A0">
+            <interfacePair lineName="Serial" srcIndex="4" srcBoundRectIsMoved="1" srcBoundRect_X="350.183777" srcBoundRect_Y="162.000000" srcOffset_X="-16.000000" srcOffset_Y="-17.000000" tarIndex="4" tarBoundRectIsMoved="1" tarBoundRect_X="477.816223" tarBoundRect_Y="162.000000" tarOffset_X="-41.000000" tarOffset_Y="-17.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="152" top="279" right="420" bottom="296" content="HDLC and PPP configuration topology" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="155" top="169" right="250" bottom="186" content="10.0.12.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="115" top="177" right="134" bottom="194" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="270" top="179" right="289" bottom="196" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="336" top="175" right="355" bottom="192" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="478" top="172" right="497" bottom="189" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="370" top="170" right="465" bottom="187" content="10.0.23.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

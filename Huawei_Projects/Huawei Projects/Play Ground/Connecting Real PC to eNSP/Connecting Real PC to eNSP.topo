@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="057CBF5B-DEE6-4a68-ACF0-9E3DD151B661" name="My Real PC" poe="0" model="Cloud" settings="" system_mac="" com_port="0" bootmode="0" cx="217.500000" cy="194.500000" edit_left="260" edit_top="279">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="0" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="0" />
+                <interfaceMap sztype="Ethernet" interfacename="GE" displayNo="1" remoteDisplayNo="2" adapterUid="\Device\NPF_{F6F3023C-18FE-48EE-B113-34A91B51073A}" isOpen="1" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="GE" displayNo="2" remoteDisplayNo="1" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+            </slot>
+        </dev>
+        <dev id="B4A61197-F94E-447a-849E-9E1D7346E5E7" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-30-12-A0" com_port="2000" bootmode="0" cx="718.000000" cy="209.000000" edit_left="745" edit_top="263">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="057CBF5B-DEE6-4a68-ACF0-9E3DD151B661" destDeviceID="B4A61197-F94E-447a-849E-9E1D7346E5E7">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="324.396820" srcBoundRect_Y="236.867218" srcOffset_X="-22.000000" srcOffset_Y="8.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="701.816345" tarBoundRect_Y="236.089035" tarOffset_X="-28.000000" tarOffset_Y="8.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="465" top="214" right="575" bottom="231" content="192.168.0.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="303" top="205" right="322" bottom="222" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="695" top="211" right="714" bottom="228" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="376" top="348" right="561" bottom="365" content="Real PC connects to eNSP" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

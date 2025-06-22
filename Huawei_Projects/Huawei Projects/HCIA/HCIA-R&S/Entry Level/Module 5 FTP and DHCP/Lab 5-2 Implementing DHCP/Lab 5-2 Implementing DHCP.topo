@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="6E9F3C51-A0B8-4ea9-BBFC-1463622C2CCD" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-19-28-D7" com_port="2001" bootmode="0" cx="433.000000" cy="222.000000" edit_left="460" edit_top="276">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="F813ED14-F53A-4465-BCC9-25566B5C6D33" name="S1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-27-6C-35" com_port="2002" bootmode="0" cx="114.000000" cy="26.000000" edit_left="142" edit_top="13">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="6FDB3047-2DFF-4947-8D38-2DD45B7EF8BD" name="S2" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-6E-1D-3A" com_port="2003" bootmode="0" cx="430.000000" cy="20.000000" edit_left="457" edit_top="9">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="DE21A097-0042-4715-A928-E80348573634" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-4D-09-F6" com_port="2000" bootmode="0" cx="115.000000" cy="224.000000" edit_left="142" edit_top="278">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="DE21A097-0042-4715-A928-E80348573634" destDeviceID="F813ED14-F53A-4465-BCC9-25566B5C6D33">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="141.781906" srcBoundRect_Y="207.816788" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="141.218094" tarBoundRect_Y="96.183212" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="F813ED14-F53A-4465-BCC9-25566B5C6D33" destDeviceID="6E9F3C51-A0B8-4ea9-BBFC-1463622C2CCD">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="177.793640" srcBoundRect_Y="75.606750" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="423.206360" tarBoundRect_Y="226.393250" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="DE21A097-0042-4715-A928-E80348573634" destDeviceID="6FDB3047-2DFF-4947-8D38-2DD45B7EF8BD">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="178.246536" srcBoundRect_Y="227.526047" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="420.753448" tarBoundRect_Y="70.473946" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="6FDB3047-2DFF-4947-8D38-2DD45B7EF8BD" destDeviceID="6E9F3C51-A0B8-4ea9-BBFC-1463622C2CCD">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="457.641266" srcBoundRect_Y="90.179001" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="0" tarBoundRect_X="459.358734" tarBoundRect_Y="205.820999" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="148" top="143" right="243" bottom="160" content="10.0.12.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="358" top="136" right="453" bottom="153" content="10.0.23.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="118" top="203" right="137" bottom="220" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="148" top="202" right="167" bottom="219" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="399" top="230" right="418" bottom="247" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="465" top="204" right="484" bottom="221" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="253" top="322" right="355" bottom="339" content="DHCP TOPOLOGY" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="601" top="125" right="1103" bottom="142" content="I need to add end devices and make them use IP addresses from DHCP" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

@@ -1,0 +1,252 @@
+
+!Software Version V500R005C10SPC300
+!Last configuration was saved at 2022-06-14 10:52:53 UTC
+#
+sysname FW1
+#
+ l2tp domain suffix-separator @
+#
+ ipsec sha2 compatible enable 
+#
+undo telnet server enable
+undo telnet ipv6 server enable
+#
+ hrp enable
+ hrp interface GigabitEthernet1/0/3 remote 10.0.3.2
+ hrp mirror session enable
+ hrp track ip-link link
+#
+ update schedule location-sdb weekly Sun 23:03
+#
+ firewall defend action discard
+#
+ banner enable
+#
+ user-manage web-authentication security port 8887
+ undo privacy-statement english
+ undo privacy-statement chinese
+page-setting
+ user-manage security version tlsv1.1 tlsv1.2
+password-policy
+ level high
+user-manage single-sign-on ad
+user-manage single-sign-on tsm
+user-manage single-sign-on radius
+user-manage auto-sync online-user
+#
+ web-manager security version tlsv1.1 tlsv1.2
+ web-manager enable
+ web-manager security enable
+#
+firewall dataplane to manageplane application-apperceive default-action drop
+#
+ undo ips log merge enable
+#
+ decoding uri-cache disable
+#
+ update schedule ips-sdb daily 00:22
+ update schedule av-sdb daily 00:22
+ update schedule sa-sdb daily 00:22
+ update schedule cnc daily 00:22
+ update schedule file-reputation daily 00:22
+#
+ip vpn-instance default
+ ipv4-family
+#
+ip-link check enable
+ip-link name link
+ destination 10.0.30.1 interface GigabitEthernet1/0/1 mode icmp
+#
+ time-range worktime
+  period-range 08:00:00 to 18:00:00 working-day   
+#
+ike proposal default
+ encryption-algorithm aes-256 aes-192 aes-128 
+ dh group14 
+ authentication-algorithm sha2-512 sha2-384 sha2-256 
+ authentication-method pre-share
+ integrity-algorithm hmac-sha2-256 
+ prf hmac-sha2-256 
+#
+aaa
+ authentication-scheme default
+ authentication-scheme admin_local
+ authentication-scheme admin_radius_local
+ authentication-scheme admin_hwtacacs_local
+ authentication-scheme admin_ad_local
+ authentication-scheme admin_ldap_local
+ authentication-scheme admin_radius
+ authentication-scheme admin_hwtacacs
+ authentication-scheme admin_ad
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+  service-type internetaccess ssl-vpn l2tp ike
+  internet-access mode password
+  reference user current-domain
+ manager-user audit-admin 
+  password cipher @%@%L5NUGw<6GE]jDjO/r=SAG/jmwRM/VEy.}=mKj,Puad`!/jpG@%@%
+  service-type web terminal 
+  level 15 
+
+ manager-user api-admin 
+  password cipher @%@%ESoXRN1hAW\Cph;#H0]Fk"Up4ux!TL>U#$lD9;.<==y9"Usk@%@%
+  level 15 
+
+ manager-user admin 
+  password cipher @%@%j1{(3K6BgLKj`A/$=QUHD7rZh5w7!,en5=9T#*If;yfA7r]D@%@%
+  service-type web terminal 
+  level 15 
+
+ role system-admin
+ role device-admin
+ role device-admin(monitor)
+ role audit-admin
+ bind manager-user audit-admin role audit-admin
+ bind manager-user admin role system-admin
+#
+l2tp-group default-lns
+#
+interface GigabitEthernet0/0/0
+ undo shutdown
+ ip binding vpn-instance default
+ ip address 192.168.0.1 255.255.255.0
+ alias GE0/METH
+#
+interface GigabitEthernet1/0/0
+ undo shutdown
+#
+interface GigabitEthernet1/0/1
+ undo shutdown
+ ip address 10.0.30.3 255.255.255.0
+#
+interface GigabitEthernet1/0/2
+ undo shutdown
+ ip address 10.0.11.1 255.255.255.0
+#
+interface GigabitEthernet1/0/3
+ undo shutdown
+ ip address 10.0.3.1 255.255.255.0
+#
+interface GigabitEthernet1/0/4
+ undo shutdown
+ ip address 10.0.50.1 255.255.255.0
+ vrrp vrid 10 virtual-ip 10.0.50.254 active
+#
+interface GigabitEthernet1/0/5
+ undo shutdown
+#
+interface GigabitEthernet1/0/6
+ undo shutdown
+#
+interface Virtual-if0
+#
+interface NULL0
+#
+firewall zone local
+ set priority 100
+#
+firewall zone trust
+ set priority 85
+ add interface GigabitEthernet0/0/0
+ add interface GigabitEthernet1/0/1
+#
+firewall zone untrust
+ set priority 5
+ add interface GigabitEthernet1/0/4
+#
+firewall zone dmz
+ set priority 50
+ add interface GigabitEthernet1/0/3
+#
+firewall zone name DMZ1 id 4
+ set priority 60
+ add interface GigabitEthernet1/0/2
+#
+ospf 1
+ area 0.0.0.0
+  network 10.0.30.3 0.0.0.0
+  network 10.0.50.3 0.0.0.0
+ area 0.0.0.1
+  network 10.0.11.1 0.0.0.0
+  nssa
+#
+undo ssh server compatible-ssh1x enable
+ssh authentication-type default password
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256 sha1
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256 sha1
+#
+firewall detect ftp
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound ssh
+user-interface vty 16 20
+#
+pki realm default
+#
+sa
+#
+location
+#
+multi-linkif
+ mode proportion-of-weight
+#
+right-manager server-group
+#
+device-classification
+ device-group pc
+ device-group mobile-terminal
+ device-group undefined-group
+#
+user-manage server-sync tsm
+#
+security-policy
+ rule name hq_branch
+  source-zone trust
+  destination-zone untrust
+  source-address 10.0.10.0 mask 255.255.255.0
+  destination-address 5.5.5.5 mask 255.255.255.255
+  destination-address 6.6.6.6 mask 255.255.255.255
+  action permit
+ rule name trust_DMZ1
+  source-zone trust
+  destination-zone DMZ1
+  source-address 10.0.10.100 mask 255.255.255.255
+  source-address 10.0.20.0 mask 255.255.255.0
+  destination-address 172.1.100.254 mask 255.255.255.255
+  destination-address 172.1.200.254 mask 255.255.255.255
+  destination-address 172.1.250.254 mask 255.255.255.255
+  action permit
+ rule name local_dmz
+  source-zone local
+  source-zone untrust
+  destination-zone local
+  destination-zone untrust
+  source-address 10.0.11.1 mask 255.255.255.255
+  source-address 10.0.11.2 mask 255.255.255.255
+  destination-address 10.0.11.1 mask 255.255.255.255
+  destination-address 10.0.11.2 mask 255.255.255.255
+  action permit
+#
+auth-policy
+#
+traffic-policy
+#
+policy-based-route
+#
+nat-policy
+#
+quota-policy
+#
+pcp-policy
+#
+dns-transparent-policy
+#
+rightm-policy
+#
+return  

@@ -1,0 +1,167 @@
+
+[V200R007C10SPC300]
+#
+ sysname AC1
+#
+ undo http secure-server enable
+#
+ set memory-usage threshold 0
+#
+ssl renegotiation-rate 1 
+#
+vrrp recover-delay 60
+#
+vlan batch 100 to 102
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name macportal_authen_profile
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ rsa local-key-pair default
+ enrollment self-signed
+#
+ike proposal default
+ encryption-algorithm aes-256 
+ dh group14 
+ authentication-algorithm sha2-256 
+ authentication-method pre-share
+ integrity-algorithm hmac-sha2-256 
+ prf hmac-sha2-256 
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user admin password irreversible-cipher $1a$/@Vu9`)K]B$f|jg:!iz^4\]"./XNuKDxcj.1{,s\+Tai|4GwtTL$
+ local-user admin service-type http
+#
+interface Vlanif102
+ ip address 192.168.102.1 255.255.255.0
+ vrrp vrid 1 virtual-ip 192.168.102.3
+ admin-vrrp vrid 1 
+ vrrp vrid 1 priority 120
+ vrrp vrid 1 preempt-mode timer delay 1800
+#
+interface GigabitEthernet0/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 100 102
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+ undo negotiation auto
+ duplex half
+#
+interface GigabitEthernet0/0/8
+ undo negotiation auto
+ duplex half
+#
+interface NULL0
+#
+ snmp-agent local-engineid 800007DB03000000000000
+ snmp-agent 
+#
+ssh server secure-algorithms cipher aes256_ctr aes128_ctr
+ssh server key-exchange dh_group14_sha1
+ssh client secure-algorithms cipher aes256_ctr aes128_ctr
+ssh client secure-algorithms hmac sha2_256
+ssh client key-exchange dh_group14_sha1
+#
+ip route-static 192.168.100.0 255.255.255.0 192.168.102.254
+#
+capwap source interface vlanif102
+#
+user-interface con 0
+user-interface vty 0 4
+ protocol inbound all
+user-interface vty 16 20
+ protocol inbound all
+#
+hsb-service 0
+ service-ip-port local-ip 192.168.102.1 peer-ip 192.168.102.2 local-data-port 10241 peer-data-port 10241
+ service-keep-alive detect retransmit 3 interval 6
+#
+hsb-group 0
+ track vrrp vrid 1 interface Vlanif102
+ bind-service 0
+ hsb enable
+#
+hsb-service-type access-user hsb-group 0
+#
+hsb-service-type ap hsb-group 0
+#
+wlan
+ traffic-profile name default
+ security-profile name huawei
+ security-profile name default
+ security-profile name default-wds
+ security-profile name default-mesh
+ ssid-profile name huawei
+  ssid huawei
+ ssid-profile name default
+ vap-profile name huawei
+  service-vlan vlan-id 101
+  ssid-profile huawei
+  security-profile huawei
+ vap-profile name default
+ wds-profile name default
+ mesh-handover-profile name default
+ mesh-profile name default
+ regulatory-domain-profile name huawei
+ regulatory-domain-profile name default
+ air-scan-profile name default
+ rrm-profile name default
+ radio-2g-profile name default
+ radio-5g-profile name default
+ wids-spoof-profile name default
+ wids-profile name default
+ wireless-access-specification
+ ap-system-profile name default
+ port-link-profile name default
+ wired-port-profile name default
+ serial-profile name preset-enjoyor-toeap 
+ ap-group name huawei
+  regulatory-domain-profile huawei
+  radio 0
+   vap-profile huawei wlan 1
+  radio 1
+   vap-profile huawei wlan 1
+  radio 2
+   vap-profile huawei wlan 1
+ ap-group name default
+ ap-id 1 type-id 61 ap-mac 00e0-fc0e-4a10 ap-sn 210235448310D47CB14F
+  ap-name AP
+  ap-group huawei
+ provision-ap
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="5AF7FA89-1FE0-4a0e-AB07-86A0320520EF" name="S1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-19-77-B6" com_port="2000" bootmode="0" cx="198.000000" cy="187.000000" edit_left="225" edit_top="241">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="1274333A-65FA-4e67-BE99-9B77F913E920" name="S2" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-6E-6F-D7" com_port="2001" bootmode="0" cx="599.000000" cy="187.000000" edit_left="626" edit_top="241">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="5AF7FA89-1FE0-4a0e-AB07-86A0320520EF" destDeviceID="1274333A-65FA-4e67-BE99-9B77F913E920">
+            <interfacePair lineName="Copper" srcIndex="8" srcBoundRectIsMoved="0" srcBoundRect_X="268.183777" srcBoundRect_Y="214.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="8" tarBoundRectIsMoved="0" tarBoundRect_X="582.816223" tarBoundRect_Y="214.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+            <interfacePair lineName="Copper" srcIndex="9" srcBoundRectIsMoved="0" srcBoundRect_X="280.183777" srcBoundRect_Y="226.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="9" tarBoundRectIsMoved="0" tarBoundRect_X="594.816223" tarBoundRect_Y="226.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes>
+        <shape type="2" filloption="0" color="16744448" upleftcorner="245,130" width="359" height="164" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="1" />
+    </shapes>
+    <txttips>
+        <txttip left="400" top="212" right="442" bottom="229" content="Trunk" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="296" top="344" right="557" bottom="361" content="Ethernet link aggregation topology" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

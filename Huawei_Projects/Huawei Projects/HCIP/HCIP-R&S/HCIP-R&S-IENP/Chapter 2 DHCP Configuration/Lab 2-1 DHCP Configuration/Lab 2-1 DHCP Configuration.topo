@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="A8F2ECC9-B072-4464-82E2-4D936B19D8A9" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-4A-7E-90" com_port="2001" bootmode="0" cx="396.000000" cy="238.000000" edit_left="423" edit_top="224">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="93C49272-5C58-4048-A005-8E30163D84DA" name="R4" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-D1-1F-10" com_port="2003" bootmode="0" cx="85.000000" cy="238.000000" edit_left="113" edit_top="222">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="CF470B92-0C80-44ac-A190-188D3116CA7E" name="S1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-CD-47-CC" com_port="2004" bootmode="0" cx="253.000000" cy="238.000000" edit_left="252" edit_top="233">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="E800873B-3973-4477-BB4C-B721BAEE1D0F" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-E7-54-31" com_port="2000" bootmode="0" cx="588.000000" cy="61.000000" edit_left="615" edit_top="47">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="3B77874F-ABEF-4f8c-B246-36B1B8AF8516" name="S2" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-B7-21-A4" com_port="2005" bootmode="0" cx="588.000000" cy="238.000000" edit_left="651" edit_top="259">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="CDD5BEA0-E4DE-4538-B34F-9291BE140B3D" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-F1-3A-4B" com_port="2002" bootmode="0" cx="253.000000" cy="61.000000" edit_left="280" edit_top="48">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="CDD5BEA0-E4DE-4538-B34F-9291BE140B3D" destDeviceID="CF470B92-0C80-44ac-A190-188D3116CA7E">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="280.000000" srcBoundRect_Y="131.183762" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="0" tarBoundRect_X="280.000000" tarBoundRect_Y="221.816238" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="93C49272-5C58-4048-A005-8E30163D84DA" destDeviceID="CF470B92-0C80-44ac-A190-188D3116CA7E">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="155.183762" srcBoundRect_Y="265.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="3" tarBoundRectIsMoved="0" tarBoundRect_X="236.816238" tarBoundRect_Y="265.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="CF470B92-0C80-44ac-A190-188D3116CA7E" destDeviceID="A8F2ECC9-B072-4464-82E2-4D936B19D8A9">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="323.183777" srcBoundRect_Y="265.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="379.816223" tarBoundRect_Y="265.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="A8F2ECC9-B072-4464-82E2-4D936B19D8A9" destDeviceID="3B77874F-ABEF-4f8c-B246-36B1B8AF8516">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="466.183777" srcBoundRect_Y="265.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="571.816223" tarBoundRect_Y="265.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="E800873B-3973-4477-BB4C-B721BAEE1D0F" destDeviceID="3B77874F-ABEF-4f8c-B246-36B1B8AF8516">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="615.000000" srcBoundRect_Y="131.183762" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="615.000000" tarBoundRect_Y="221.816238" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="315" top="327" right="455" bottom="344" content="DHCP CONFIGURATION" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="469" top="68" right="579" bottom="116" content="DHCP Server 1&#x0D;&#x0A;   IP Pool&#x0D;&#x0A;10.10.10.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="416" top="288" right="435" bottom="305" content="GW" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="65" top="294" right="152" bottom="311" content="DHCP Client" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="121" top="68" right="231" bottom="116" content="DHCP Server 2&#x0D;&#x0A;   IP Pool&#x0D;&#x0A;192.168.1.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

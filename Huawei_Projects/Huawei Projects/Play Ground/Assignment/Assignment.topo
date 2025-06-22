@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="625B3CA8-1DD9-4ea2-8D8C-6679D54B75DD" name="LSW1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-2C-54-DC" com_port="2000" bootmode="1" cx="675.000000" cy="250.000000" edit_left="698" edit_top="302">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="FFCC0926-4DFB-410e-A742-F4FFC6BA48DE" name="PC2" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-8B-29-30  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-8B-29-30" com_port="0" bootmode="1" cx="893.000000" cy="108.000000" edit_left="920" edit_top="162">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="B1B05E3D-9A03-4af8-9543-50982549F5EC" name="PC4" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-A7-2D-C4  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-A7-2D-C4" com_port="0" bootmode="1" cx="893.000000" cy="423.000000" edit_left="920" edit_top="477">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="5032521E-C21D-4c88-B484-189856147C6A" name="PC3" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-1C-35-61  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-1C-35-61" com_port="0" bootmode="1" cx="441.000000" cy="423.000000" edit_left="468" edit_top="477">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="FEC8717C-F148-47c8-BB1B-E7EAEE66A9DA" name="PC1" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-9A-66-8D  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-9A-66-8D" com_port="0" bootmode="1" cx="441.000000" cy="108.000000" edit_left="468" edit_top="162">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="FEC8717C-F148-47c8-BB1B-E7EAEE66A9DA" destDeviceID="625B3CA8-1DD9-4ea2-8D8C-6679D54B75DD">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="504.917938" srcBoundRect_Y="157.403198" srcOffset_X="-2.000000" srcOffset_Y="-12.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="665.082031" tarBoundRect_Y="254.596802" tarOffset_X="-80.000000" tarOffset_Y="-12.000000" />
+        </line>
+        <line srcDeviceID="FFCC0926-4DFB-410e-A742-F4FFC6BA48DE" destDeviceID="625B3CA8-1DD9-4ea2-8D8C-6679D54B75DD">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="883.815613" srcBoundRect_Y="158.569641" srcOffset_X="-84.000000" srcOffset_Y="-10.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="738.184387" tarBoundRect_Y="253.430359" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="5032521E-C21D-4c88-B484-189856147C6A" destDeviceID="625B3CA8-1DD9-4ea2-8D8C-6679D54B75DD">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="502.724274" srcBoundRect_Y="424.327789" srcOffset_X="-68.000000" srcOffset_Y="-14.000000" tarIndex="2" tarBoundRectIsMoved="1" tarBoundRect_X="667.275757" tarBoundRect_Y="302.672211" tarOffset_X="-79.000000" tarOffset_Y="-4.000000" />
+        </line>
+        <line srcDeviceID="B1B05E3D-9A03-4af8-9543-50982549F5EC" destDeviceID="625B3CA8-1DD9-4ea2-8D8C-6679D54B75DD">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="886.173462" srcBoundRect_Y="423.155975" srcOffset_X="-80.000000" srcOffset_Y="2.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="735.826538" tarBoundRect_Y="303.844025" tarOffset_X="9.000000" tarOffset_Y="-3.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="33" top="159" right="407" bottom="457" content="REQUIREMENTS&#x0D;&#x0A;1. S3700 Switch&#x0D;&#x0A;2. 4 PCs&#x0D;&#x0A;&#x0D;&#x0A;TASK&#x0D;&#x0A;1. Configure IP addresses for the 4 PCs.&#x0D;&#x0A;Ensure they are all on the same subnet.&#x0D;&#x0A;2. Leave the switch transparent &#x0D;&#x0A;(Do not perform any configuration on it).&#x0D;&#x0A;3. Turn ON all devices.&#x0D;&#x0A;4. Try to ping a device from any device.&#x0D;&#x0A;E.g.: Try to ping PC1 from PC4 (and vice-versa).&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;QUESTIONS&#x0D;&#x0A;1. DID THE PING WORK?&#x0D;&#x0A;2. What do you think the switch is doing here?&#x0D;&#x0A;3. How many collision domains do we have?&#x0D;&#x0A;4. How many broadcast domains do we have?" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

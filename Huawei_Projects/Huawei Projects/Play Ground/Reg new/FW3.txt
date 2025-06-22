@@ -1,0 +1,272 @@
+
+!Software Version V500R005C10SPC300
+!Last configuration was saved at 2022-02-16 14:56:28 UTC
+#
+sysname FW3
+#
+ l2tp domain suffix-separator @
+#
+ ipsec sha2 compatible enable 
+#
+undo telnet server enable
+undo telnet ipv6 server enable
+#
+ update schedule location-sdb weekly Sun 01:37
+#
+ firewall defend action discard
+#
+ banner enable
+#
+ user-manage web-authentication security port 8887
+ undo privacy-statement english
+ undo privacy-statement chinese
+page-setting
+ user-manage security version tlsv1.1 tlsv1.2
+password-policy
+ level high
+user-manage single-sign-on ad
+user-manage single-sign-on tsm
+user-manage single-sign-on radius
+user-manage auto-sync online-user
+#
+ web-manager security version tlsv1.1 tlsv1.2
+ web-manager enable
+ web-manager security enable
+#
+firewall dataplane to manageplane application-apperceive default-action drop
+#
+ undo ips log merge enable
+#
+ decoding uri-cache disable
+#
+ update schedule ips-sdb daily 06:08
+ update schedule av-sdb daily 06:08
+ update schedule sa-sdb daily 06:08
+ update schedule cnc daily 06:08
+ update schedule file-reputation daily 06:08
+#
+ip vpn-instance default
+ ipv4-family
+#
+ time-range worktime
+  period-range 08:00:00 to 18:00:00 working-day   
+#
+acl number 3000
+ rule 5 permit ip source 10.10.0.0 0.0.255.255 destination 192.168.102.0 0.0.0.255 
+#
+ipsec proposal proposal
+ esp authentication-algorithm sha2-256 
+ esp encryption-algorithm aes-256 
+#
+ike proposal default
+ encryption-algorithm aes-256 aes-192 aes-128 
+ dh group14 
+ authentication-algorithm sha2-512 sha2-384 sha2-256 
+ authentication-method pre-share
+ integrity-algorithm hmac-sha2-256 
+ prf hmac-sha2-256 
+ike proposal 1
+ encryption-algorithm aes-256 
+ dh group14 
+ authentication-algorithm sha2-256 
+ authentication-method pre-share
+ integrity-algorithm hmac-sha2-256 
+ prf hmac-sha2-256 
+#
+ike peer IKE
+ pre-shared-key %^%#45<|7/6}>.&b'<>QORg:*(M8<y.ErA[h`}9l!t+;%^%#
+ ike-proposal 1
+ remote-id-type ip
+ remote-id 100.1.1.2
+ local-id 200.1.1.2
+ remote-address 100.1.1.2 
+#
+ipsec policy policy 1 isakmp
+ security acl 3000
+ ike-peer IKE
+ proposal proposal
+#
+aaa
+ authentication-scheme default
+ authentication-scheme admin_local
+ authentication-scheme admin_radius_local
+ authentication-scheme admin_hwtacacs_local
+ authentication-scheme admin_ad_local
+ authentication-scheme admin_ldap_local
+ authentication-scheme admin_radius
+ authentication-scheme admin_hwtacacs
+ authentication-scheme admin_ad
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+  service-type internetaccess ssl-vpn l2tp ike
+  internet-access mode password
+  reference user current-domain
+ manager-user audit-admin 
+  password cipher @%@%Bhd/ZTFWl0#1)8YnBf!~E>AJ&#tvE9'7DJ^L-56_VYY3>AME@%@%
+  service-type web terminal 
+  level 15 
+
+ manager-user api-admin 
+  password cipher @%@%Vh}xIgF*~Ag@`V0)qN_$aEaY}]!s'4l^JIn<Xo2&OMb.Ea\a@%@%
+  level 15 
+
+ manager-user admin 
+  password cipher @%@%:x}[9#3NIGy_$ZWg'RnI.>YMiNA~U".WcS3I*6#XuV%B>YP.@%@%
+  service-type web terminal 
+  level 15 
+
+ role system-admin
+ role device-admin
+ role device-admin(monitor)
+ role audit-admin
+ bind manager-user audit-admin role audit-admin
+ bind manager-user admin role system-admin
+#
+l2tp-group default-lns
+#
+interface GigabitEthernet0/0/0
+ undo shutdown
+ ip binding vpn-instance default
+ ip address 192.168.0.1 255.255.255.0
+ alias GE0/METH
+#
+interface GigabitEthernet1/0/0
+ undo shutdown
+ ip address 200.1.1.2 255.255.255.252
+ ipsec policy policy
+#
+interface GigabitEthernet1/0/1
+ undo shutdown
+ ip address 10.10.2.1 255.255.255.252
+ ospf enable 1 area 0.0.0.0
+#
+interface GigabitEthernet1/0/2
+ undo shutdown
+ ip address 10.10.1.1 255.255.255.252
+ ospf cost 10
+ ospf enable 1 area 0.0.0.0
+#
+interface GigabitEthernet1/0/3
+ undo shutdown
+#
+interface GigabitEthernet1/0/4
+ undo shutdown
+#
+interface GigabitEthernet1/0/5
+ undo shutdown
+#
+interface GigabitEthernet1/0/6
+ undo shutdown
+#
+interface Virtual-if0
+#
+interface NULL0
+#
+firewall zone local
+ set priority 100
+#
+firewall zone trust
+ set priority 85
+ add interface GigabitEthernet0/0/0
+ add interface GigabitEthernet1/0/1
+ add interface GigabitEthernet1/0/2
+#
+firewall zone untrust
+ set priority 5
+ add interface GigabitEthernet1/0/0
+#
+firewall zone dmz
+ set priority 50
+#
+ospf 1
+ default-route-advertise
+ area 0.0.0.0
+#
+ip route-static 0.0.0.0 0.0.0.0 200.1.1.1
+ip route-static 192.168.102.0 255.255.255.0 200.1.1.1
+#
+undo ssh server compatible-ssh1x enable
+ssh authentication-type default password
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256 sha1
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256 sha1
+#
+firewall detect ftp
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound ssh
+user-interface vty 16 20
+#
+pki realm default
+#
+sa
+#
+location
+#
+multi-linkif
+ mode proportion-of-weight
+#
+right-manager server-group
+#
+device-classification
+ device-group pc
+ device-group mobile-terminal
+ device-group undefined-group
+#
+user-manage server-sync tsm
+#
+security-policy
+ rule name PC2_ISP
+  source-zone trust
+  destination-zone untrust
+  source-address 10.10.5.2 mask 255.255.255.255
+  destination-address 1.1.1.1 mask 255.255.255.255
+  destination-address 2.2.2.2 mask 255.255.255.255
+  action permit
+ rule name ipsec1
+  source-zone trust
+  destination-zone untrust
+  source-address 10.10.0.0 mask 255.255.0.0
+  destination-address 192.168.102.0 mask 255.255.255.0
+  action permit
+ rule name ipsec2
+  source-zone untrust
+  destination-zone trust
+  source-address 192.168.102.0 mask 255.255.255.0
+  destination-address 10.10.0.0 mask 255.255.0.0
+  action permit
+ rule name ikeout
+  source-zone local
+  destination-zone untrust
+  source-address 200.1.1.2 mask 255.255.255.0
+  destination-address 100.1.1.2 mask 255.255.255.0
+  action permit
+ rule name ikein
+  source-zone untrust
+  destination-zone trust
+  source-address 100.1.1.2 mask 255.255.255.0
+  destination-address 200.1.1.2 mask 255.255.255.0
+  action permit
+#
+auth-policy
+#
+traffic-policy
+#
+policy-based-route
+#
+nat-policy
+#
+quota-policy
+#
+pcp-policy
+#
+dns-transparent-policy
+#
+rightm-policy
+#
+return  

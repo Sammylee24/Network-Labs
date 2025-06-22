@@ -1,0 +1,61 @@
+
+[V200R003C00]
+#
+ sysname R3
+#
+ snmp-agent local-engineid 800007DB03000000000000
+ snmp-agent 
+#
+ clock timezone China-Standard-Time minus 08:00:00
+#
+portal local-server load flash:/portalpage.zip
+#
+ drop illegal-mac alarm
+#
+ wlan ac-global carrier id other ac id 0
+#
+ set cpu-usage threshold 80 restore 75
+#
+aaa 
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default 
+ domain default_admin 
+ local-user admin password cipher %$%$K8m.Nt84DZ}e#<0`8bmE3Uw}%$%$
+ local-user admin service-type http
+#
+isis 1
+ is-level level-2
+ network-entity 49.0001.0000.0000.0001.00
+#
+firewall zone Local
+ priority 15
+#
+interface GigabitEthernet0/0/0
+ ip address 10.0.0.3 255.255.255.0 
+#
+interface GigabitEthernet0/0/1
+ ip address 10.0.36.3 255.255.255.0 
+ isis enable 1
+#
+interface GigabitEthernet0/0/2
+#
+interface NULL0
+#
+interface LoopBack0
+ ip address 3.3.3.3 255.255.255.255 
+ isis enable 1
+#
+ip route-static 20.0.0.0 255.255.255.0 10.0.36.6
+ip route-static 192.168.1.0 255.255.255.0 10.0.0.254
+ip route-static 192.168.2.0 255.255.255.0 10.0.36.6
+#
+user-interface con 0
+ authentication-mode password
+user-interface vty 0 4
+user-interface vty 16 20
+#
+wlan ac
+#
+return

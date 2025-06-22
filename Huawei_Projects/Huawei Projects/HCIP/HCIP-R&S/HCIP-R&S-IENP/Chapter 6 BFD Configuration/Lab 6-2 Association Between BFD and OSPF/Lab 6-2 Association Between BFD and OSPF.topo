@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="739002A9-3C91-4e4d-AE0E-7DFDEC94985B" name="S1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-6E-0F-68" com_port="2002" bootmode="0" cx="485.210022" cy="94.380005" edit_left="513" edit_top="81">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="525258D7-891C-4413-B012-61FC9D8A6A83" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-A2-66-C7" com_port="2000" bootmode="0" cx="256.520020" cy="264.990021" edit_left="283" edit_top="318">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="2CD4D8CB-70E6-45e7-AF86-781833DB8DC6" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-F7-54-28" com_port="2001" bootmode="0" cx="713.900024" cy="266.200012" edit_left="740" edit_top="320">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="739002A9-3C91-4e4d-AE0E-7DFDEC94985B" destDeviceID="525258D7-891C-4413-B012-61FC9D8A6A83">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="477.326202" srcBoundRect_Y="146.740356" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="317.673798" tarBoundRect_Y="265.259644" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="739002A9-3C91-4e4d-AE0E-7DFDEC94985B" destDeviceID="2CD4D8CB-70E6-45e7-AF86-781833DB8DC6">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="546.474304" srcBoundRect_Y="147.006927" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="1" tarBoundRect_X="705.525696" tarBoundRect_Y="266.993073" tarOffset_X="0.000000" tarOffset_Y="-9.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="298" top="243" right="317" bottom="260" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="682" top="269" right="701" bottom="286" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="159" top="275" right="246" bottom="307" content="Loopback0:&#x0D;&#x0A;10.0.1.1/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="784" top="272" right="871" bottom="304" content="Loopback0:&#x0D;&#x0A;10.0.2.2/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="460" top="190" right="555" bottom="222" content="OSPF AREA 0&#x0D;&#x0A;10.1.12.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="340" top="380" right="691" bottom="397" content="NETWORKING OF ASSOCIATION BETWEEN BFD AND OSPF" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

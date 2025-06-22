@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="D5043EFE-F731-43ca-A9F4-3F906FCE25D5" name="R4" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-06-78-07" com_port="2002" bootmode="0" cx="495.800018" cy="200.600006" edit_left="519" edit_top="185">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Ethernet" interfacename="Ethernet" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="1" type="1" />
+        </dev>
+        <dev id="FD4FE106-39BE-4990-92B1-3E4AE89F010A" name="S2" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-39-6B-89" com_port="2004" bootmode="0" cx="689.900024" cy="319.700012" edit_left="752" edit_top="339">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="B30D242D-CD82-498d-9D30-6E2727387BF2" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-F9-72-0C" com_port="2001" bootmode="0" cx="690.800049" cy="519.200012" edit_left="717" edit_top="573">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="73E1E9B8-FF0A-4552-827A-1D32E2B8B969" name="S1" poe="0" model="S5700" settings="" system_mac="4C-1F-CC-80-5C-B0" com_port="2003" bootmode="0" cx="301.000000" cy="321.200012" edit_left="291" edit_top="341">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="24" />
+            </slot>
+        </dev>
+        <dev id="D719A4AB-C304-4198-9456-741A3E50F81D" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-79-4D-7A" com_port="2000" bootmode="0" cx="301.500000" cy="522.500000" edit_left="328" edit_top="576">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="D719A4AB-C304-4198-9456-741A3E50F81D" destDeviceID="73E1E9B8-FF0A-4552-827A-1D32E2B8B969">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="328.000000" srcBoundRect_Y="505.816223" srcOffset_X="-58.000000" srcOffset_Y="-1.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="328.000000" tarBoundRect_Y="391.183777" tarOffset_X="-55.000000" tarOffset_Y="-1.000000" />
+        </line>
+        <line srcDeviceID="FD4FE106-39BE-4990-92B1-3E4AE89F010A" destDeviceID="B30D242D-CD82-498d-9D30-6E2727387BF2">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="716.215942" srcBoundRect_Y="389.183228" srcOffset_X="7.000000" srcOffset_Y="0.000000" tarIndex="2" tarBoundRectIsMoved="1" tarBoundRect_X="716.784058" tarBoundRect_Y="502.816772" tarOffset_X="6.000000" tarOffset_Y="-1.000000" />
+        </line>
+        <line srcDeviceID="73E1E9B8-FF0A-4552-827A-1D32E2B8B969" destDeviceID="D5043EFE-F731-43ca-A9F4-3F906FCE25D5">
+            <interfacePair lineName="Copper" srcIndex="3" srcBoundRectIsMoved="1" srcBoundRect_X="364.640961" srcBoundRect_Y="325.146606" srcOffset_X="-50.000000" srcOffset_Y="-16.000000" tarIndex="1" tarBoundRectIsMoved="1" tarBoundRect_X="485.359039" tarBoundRect_Y="249.853394" tarOffset_X="-52.000000" tarOffset_Y="-12.000000" />
+        </line>
+        <line srcDeviceID="FD4FE106-39BE-4990-92B1-3E4AE89F010A" destDeviceID="D5043EFE-F731-43ca-A9F4-3F906FCE25D5">
+            <interfacePair lineName="Copper" srcIndex="3" srcBoundRectIsMoved="1" srcBoundRect_X="679.189636" srcBoundRect_Y="323.420441" srcOffset_X="8.000000" srcOffset_Y="-13.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="558.810364" tarBoundRect_Y="249.579544" tarOffset_X="9.000000" tarOffset_Y="-6.000000" />
+        </line>
+        <line srcDeviceID="73E1E9B8-FF0A-4552-827A-1D32E2B8B969" destDeviceID="FD4FE106-39BE-4990-92B1-3E4AE89F010A">
+            <interfacePair lineName="Copper" srcIndex="8" srcBoundRectIsMoved="1" srcBoundRect_X="371.183197" srcBoundRect_Y="347.777405" srcOffset_X="-8.000000" srcOffset_Y="4.000000" tarIndex="8" tarBoundRectIsMoved="1" tarBoundRect_X="672.816833" tarBoundRect_Y="346.222595" tarOffset_X="-34.000000" tarOffset_Y="7.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="453" top="25" right="517" bottom="42" content="SCENARIO" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="85" top="47" right="980" bottom="157" content="You are a network administrator of a company. The company&apos;s network is an Ethernet with two switches and one router. &#x0D;&#x0A;In the figure below, R1 and R2 represent PCs of different departments, and are added to two VLANs respectively. &#x0D;&#x0A;R1 and R2 need to communicate with each other. The company used the multi-armed method. &#x0D;&#x0A;That is, the switches are connected to different physical interfaces of the router. &#x0D;&#x0A;To conserve interfaces, the company decided to use the router-on-a-stick method. &#x0D;&#x0A;Then, due to the network structure change, more traffic is transmitted between VLANs. &#x0D;&#x0A;Therefore, the company required multi-level switching. To facilitate network management, VLAN aggregation is needed." fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="432" top="616" right="617" bottom="633" content="INTER-VLAN COMMUNICATION" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="487" top="252" right="506" bottom="269" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="542" top="252" right="561" bottom="269" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="693" top="500" right="712" bottom="517" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="336" top="502" right="355" bottom="519" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="333" top="440" right="420" bottom="457" content="10.0.2.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="423" top="289" right="510" bottom="306" content="10.0.2.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="537" top="294" right="624" bottom="311" content="10.0.3.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="623" top="445" right="710" bottom="462" content="10.0.3.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="453" top="514" right="600" bottom="531" content="I stopped at step 3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

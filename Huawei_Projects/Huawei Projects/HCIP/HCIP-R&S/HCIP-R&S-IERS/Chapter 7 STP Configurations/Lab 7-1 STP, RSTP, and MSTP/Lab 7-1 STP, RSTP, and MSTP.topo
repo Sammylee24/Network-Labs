@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="19F9DF9D-26A7-448c-A4E2-856D7002DF0F" name="S1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-62-13-AD" com_port="2000" bootmode="0" cx="224.400009" cy="379.200012" edit_left="251" edit_top="435">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="64DB25EA-F254-48ae-83C0-5F97667BD874" name="S2" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-16-57-C2" com_port="2001" bootmode="0" cx="622.400024" cy="379.700012" edit_left="649" edit_top="433">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="E5802745-A040-4431-B594-ECA1B88CE2E5" name="S3" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-D1-50-A0" com_port="2002" bootmode="0" cx="225.900009" cy="184.100006" edit_left="252" edit_top="173">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="9FE7D8DA-871C-4fb5-A67A-B548F20681F8" name="S4" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-C1-28-C4" com_port="2003" bootmode="0" cx="621.300049" cy="183.500000" edit_left="649" edit_top="173">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="E5802745-A040-4431-B594-ECA1B88CE2E5" destDeviceID="9FE7D8DA-871C-4fb5-A67A-B548F20681F8">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="295.183624" srcBoundRect_Y="210.890945" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="604.816345" tarBoundRect_Y="210.109055" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="E5802745-A040-4431-B594-ECA1B88CE2E5" destDeviceID="64DB25EA-F254-48ae-83C0-5F97667BD874">
+            <interfacePair lineName="Copper" srcIndex="6" srcBoundRectIsMoved="0" srcBoundRect_X="290.760468" srcBoundRect_Y="230.038513" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="6" tarBoundRectIsMoved="0" tarBoundRect_X="610.239563" tarBoundRect_Y="386.961487" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="19F9DF9D-26A7-448c-A4E2-856D7002DF0F" destDeviceID="64DB25EA-F254-48ae-83C0-5F97667BD874">
+            <interfacePair lineName="Copper" srcIndex="9" srcBoundRectIsMoved="0" srcBoundRect_X="294.183777" srcBoundRect_Y="406.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="9" tarBoundRectIsMoved="0" tarBoundRect_X="605.816223" tarBoundRect_Y="406.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+            <interfacePair lineName="Copper" srcIndex="8" srcBoundRectIsMoved="0" srcBoundRect_X="306.183777" srcBoundRect_Y="418.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="8" tarBoundRectIsMoved="0" tarBoundRect_X="617.816223" tarBoundRect_Y="418.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="E5802745-A040-4431-B594-ECA1B88CE2E5" destDeviceID="19F9DF9D-26A7-448c-A4E2-856D7002DF0F">
+            <interfacePair lineName="Copper" srcIndex="12" srcBoundRectIsMoved="0" srcBoundRect_X="251.778549" srcBoundRect_Y="254.183197" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="12" tarBoundRectIsMoved="0" tarBoundRect_X="251.221451" tarBoundRect_Y="362.816803" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="9FE7D8DA-871C-4fb5-A67A-B548F20681F8" destDeviceID="19F9DF9D-26A7-448c-A4E2-856D7002DF0F">
+            <interfacePair lineName="Copper" srcIndex="13" srcBoundRectIsMoved="0" srcBoundRect_X="609.278198" srcBoundRect_Y="229.117050" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="13" tarBoundRectIsMoved="0" tarBoundRect_X="289.721771" tarBoundRect_Y="386.882965" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="9FE7D8DA-871C-4fb5-A67A-B548F20681F8" destDeviceID="64DB25EA-F254-48ae-83C0-5F97667BD874">
+            <interfacePair lineName="Copper" srcIndex="5" srcBoundRectIsMoved="0" srcBoundRect_X="648.220337" srcBoundRect_Y="253.183197" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="5" tarBoundRectIsMoved="0" tarBoundRect_X="648.779663" tarBoundRect_Y="362.816803" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="418" top="39" right="482" bottom="56" content="SCENARIO" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="74" top="66" right="969" bottom="114" content="You are a network administrator of a company. The company uses a backup network, and configure STP to prevent loops. &#x0D;&#x0A;STP convergence on interfaces requires a long time. To speed up convergence, the company needs to use RSTP. &#x0D;&#x0A;All VLANs share an STP tree. To load balance traffic between VLANs, the company needs to use MSTP. " fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="332" top="502" right="547" bottom="519" content="STP, RSTP, AND MSTP TOPOLOGY" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="809" top="301" right="956" bottom="318" content="I stopped at step 7" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

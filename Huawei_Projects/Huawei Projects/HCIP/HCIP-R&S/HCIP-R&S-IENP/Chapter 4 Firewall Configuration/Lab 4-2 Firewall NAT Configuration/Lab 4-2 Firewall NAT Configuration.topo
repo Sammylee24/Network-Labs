@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="03DE8C94-3BA0-4dcc-87A0-430307595684" name="S1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-FE-5E-4D" com_port="2000" bootmode="0" cx="455.000000" cy="174.000000" edit_left="455" edit_top="216">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="4C1471AA-5267-42d6-A947-30131AE43B89" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-CE-23-37" com_port="2003" bootmode="0" cx="337.000000" cy="317.000000" edit_left="401" edit_top="336">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="B86280C2-B16A-4924-9EC7-3CBB6C308381" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-4D-08-06" com_port="2004" bootmode="0" cx="582.000000" cy="317.000000" edit_left="574" edit_top="335">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="531130A1-9312-4026-B4FC-58C6C05CC5E8" name="R4" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-63-02-14" com_port="2005" bootmode="0" cx="691.000000" cy="174.000000" edit_left="716" edit_top="161">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="B5EFA853-DA48-4d70-8747-5139FF536895" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-7F-3F-E3" com_port="2002" bootmode="0" cx="234.000000" cy="174.000000" edit_left="262" edit_top="161">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="E5E7010F-BB9F-4ca9-BD25-B8EFFC44A655" name="FW" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-B8-6A-4D" com_port="2001" bootmode="0" cx="455.000000" cy="16.000000" edit_left="518" edit_top="35">
+            <slot id="1">
+                <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="1" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="2" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="3" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="4" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="5" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="6" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="B5EFA853-DA48-4d70-8747-5139FF536895" destDeviceID="03DE8C94-3BA0-4dcc-87A0-430307595684">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="304.183777" srcBoundRect_Y="201.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="438.816223" tarBoundRect_Y="201.000000" tarOffset_X="-58.000000" tarOffset_Y="4.000000" />
+        </line>
+        <line srcDeviceID="03DE8C94-3BA0-4dcc-87A0-430307595684" destDeviceID="531130A1-9312-4026-B4FC-58C6C05CC5E8">
+            <interfacePair lineName="Copper" srcIndex="3" srcBoundRectIsMoved="0" srcBoundRect_X="525.183777" srcBoundRect_Y="201.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="1" tarBoundRect_X="674.816223" tarBoundRect_Y="201.000000" tarOffset_X="-30.000000" tarOffset_Y="2.000000" />
+        </line>
+        <line srcDeviceID="4C1471AA-5267-42d6-A947-30131AE43B89" destDeviceID="03DE8C94-3BA0-4dcc-87A0-430307595684">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="391.484863" srcBoundRect_Y="310.692047" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="1" tarBoundRect_X="454.515137" tarBoundRect_Y="234.307938" tarOffset_X="-83.000000" tarOffset_Y="2.000000" />
+        </line>
+        <line srcDeviceID="03DE8C94-3BA0-4dcc-87A0-430307595684" destDeviceID="B86280C2-B16A-4924-9EC7-3CBB6C308381">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="510.675720" srcBoundRect_Y="233.288406" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="1" tarBoundRect_X="580.324280" tarBoundRect_Y="311.711609" tarOffset_X="-55.000000" tarOffset_Y="-3.000000" />
+        </line>
+        <line srcDeviceID="E5E7010F-BB9F-4ca9-BD25-B8EFFC44A655" destDeviceID="03DE8C94-3BA0-4dcc-87A0-430307595684">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="482.000000" srcBoundRect_Y="86.183769" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="11" tarBoundRectIsMoved="0" tarBoundRect_X="482.000000" tarBoundRect_Y="157.816238" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+            <interfacePair lineName="Copper" srcIndex="3" srcBoundRectIsMoved="0" srcBoundRect_X="490.000000" srcBoundRect_Y="94.183769" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="12" tarBoundRectIsMoved="0" tarBoundRect_X="490.000000" tarBoundRect_Y="165.816238" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="474.000000" srcBoundRect_Y="78.183769" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="10" tarBoundRectIsMoved="0" tarBoundRect_X="474.000000" tarBoundRect_Y="149.816238" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes>
+        <shape type="0" filloption="0" color="255" upleftcorner="0,0" width="0" height="0" startpt="189,123" endpt="189,281" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="255" upleftcorner="0,0" width="0" height="0" startpt="189,284" endpt="326,284" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="255" upleftcorner="0,0" width="0" height="0" startpt="327,284" endpt="459,203" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="255" upleftcorner="0,0" width="0" height="0" startpt="188,124" endpt="324,126" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="255" upleftcorner="0,0" width="0" height="0" startpt="322,126" endpt="459,199" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="33023" upleftcorner="0,0" width="0" height="0" startpt="755,123" endpt="757,264" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="33023" upleftcorner="0,0" width="0" height="0" startpt="757,264" endpt="632,265" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="33023" upleftcorner="0,0" width="0" height="0" startpt="632,265" endpt="502,204" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="33023" upleftcorner="0,0" width="0" height="0" startpt="753,125" endpt="632,127" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="33023" upleftcorner="0,0" width="0" height="0" startpt="632,127" endpt="500,200" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="16711680" upleftcorner="0,0" width="0" height="0" startpt="285,427" endpt="694,425" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="16711680" upleftcorner="0,0" width="0" height="0" startpt="694,425" endpt="696,309" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="16711680" upleftcorner="0,0" width="0" height="0" startpt="696,309" endpt="485,220" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="16711680" upleftcorner="0,0" width="0" height="0" startpt="283,428" endpt="283,314" borderStyle="2" borderWidth="2" />
+        <shape type="0" filloption="0" color="16711680" upleftcorner="0,0" width="0" height="0" startpt="284,314" endpt="477,216" borderStyle="2" borderWidth="2" />
+    </shapes>
+    <txttips>
+        <txttip left="433" top="62" right="467" bottom="79" content=".254" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="289" top="177" right="308" bottom="194" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="337" top="175" right="416" bottom="192" content="1.1.1.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="212" top="224" right="322" bottom="256" content="Loopback0:&#x0D;&#x0A;11.11.11.11/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="437" top="264" right="532" bottom="281" content="10.0.20.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="362" top="296" right="381" bottom="313" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="587" top="295" right="606" bottom="312" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="323" top="367" right="410" bottom="399" content="Loopback0:&#x0D;&#x0A;10.0.2.2/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="570" top="367" right="657" bottom="399" content="Loopback0:&#x0D;&#x0A;10.0.3.3/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="366" top="455" right="619" bottom="472" content="NAT CONFIGURATION ON THE FIREWALL" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="667" top="178" right="686" bottom="195" content=".4" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="550" top="179" right="645" bottom="196" content="10.0.40.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="237" top="142" right="294" bottom="159" content="untrust" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="645" top="140" right="672" bottom="157" content="DMZ" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="462" top="374" right="504" bottom="391" content="trust" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="656" top="221" right="743" bottom="253" content="Loopback0:&#x0D;&#x0A;10.0.4.4/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="593" top="75" right="733" bottom="92" content="I can&apos;t access DMZ" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="EF558D93-DD4C-47d9-9890-FF31901794DB" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-73-3A-16" com_port="2000" bootmode="0" cx="185.000000" cy="392.000000" edit_left="176" edit_top="408">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="3" type="521" />
+        </dev>
+        <dev id="F5E291DA-A749-499e-B3CE-F37024049E2E" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-3F-59-F7" com_port="2001" bootmode="0" cx="427.000000" cy="391.000000" edit_left="451" edit_top="377">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="3" type="521" />
+        </dev>
+        <dev id="A34FB2CA-BE5D-478f-9EBE-96AC6C34DDEB" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-20-7E-7E" com_port="2002" bootmode="0" cx="640.000000" cy="391.000000" edit_left="706" edit_top="410">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="3" type="521" />
+        </dev>
+        <dev id="257AD27C-18F7-4167-9757-0DC18E4E2F82" name="R5" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-3A-0B-74" com_port="2004" bootmode="0" cx="637.000000" cy="210.000000" edit_left="701" edit_top="227">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="3" type="521" />
+        </dev>
+        <dev id="1F0C4D11-6636-4a02-81EA-630B6B3362D1" name="R4" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-27-3B-2F" com_port="2003" bootmode="0" cx="183.000000" cy="210.000000" edit_left="173" edit_top="227">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="3" type="521" />
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="1F0C4D11-6636-4a02-81EA-630B6B3362D1" destDeviceID="EF558D93-DD4C-47d9-9890-FF31901794DB">
+            <interfacePair lineName="Serial" srcIndex="3" srcBoundRectIsMoved="0" srcBoundRect_X="210.474518" srcBoundRect_Y="280.181152" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="3" tarBoundRectIsMoved="0" tarBoundRect_X="211.525482" tarBoundRect_Y="375.818848" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="EF558D93-DD4C-47d9-9890-FF31901794DB" destDeviceID="F5E291DA-A749-499e-B3CE-F37024049E2E">
+            <interfacePair lineName="Serial" srcIndex="4" srcBoundRectIsMoved="1" srcBoundRect_X="255.183395" srcBoundRect_Y="418.821564" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="4" tarBoundRectIsMoved="1" tarBoundRect_X="410.816589" tarBoundRect_Y="418.178436" tarOffset_X="-39.000000" tarOffset_Y="1.000000" />
+        </line>
+        <line srcDeviceID="F5E291DA-A749-499e-B3CE-F37024049E2E" destDeviceID="A34FB2CA-BE5D-478f-9EBE-96AC6C34DDEB">
+            <interfacePair lineName="Serial" srcIndex="3" srcBoundRectIsMoved="0" srcBoundRect_X="497.183777" srcBoundRect_Y="418.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="623.816223" tarBoundRect_Y="418.000000" tarOffset_X="-40.000000" tarOffset_Y="2.000000" />
+        </line>
+        <line srcDeviceID="A34FB2CA-BE5D-478f-9EBE-96AC6C34DDEB" destDeviceID="257AD27C-18F7-4167-9757-0DC18E4E2F82">
+            <interfacePair lineName="Serial" srcIndex="4" srcBoundRectIsMoved="0" srcBoundRect_X="666.284363" srcBoundRect_Y="374.822174" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="4" tarBoundRectIsMoved="0" tarBoundRect_X="664.715637" tarBoundRect_Y="280.177826" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes>
+        <shape type="1" filloption="0" color="16744448" upleftcorner="143,357" width="595" height="153" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+        <shape type="1" filloption="0" color="65535" upleftcorner="133,167" width="210" height="131" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+        <shape type="1" filloption="0" color="8421504" upleftcorner="516,168" width="221" height="129" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+    </shapes>
+    <txttips>
+        <txttip left="414" top="531" right="516" bottom="548" content="IBGP AND EBGP" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="72" top="27" right="876" bottom="106" content="You are a network administrator of a company. The company¡¯s network uses BGP as the routing protocol. &#x0D;&#x0A;This network consists of multiple autonomous systems (ASs). Different branches use different AS numbers. &#x0D;&#x0A;You need to build this network. OSPF is used in the headquarters as an IGP. &#x0D;&#x0A;Different branches in the company use private BGP AS numbers. &#x0D;&#x0A;After building the network, you still need to observe BGP routing information transmission. " fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="374" top="7" right="438" bottom="24" content="SCENARIO" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="240" top="216" right="327" bottom="248" content="Loopback0:&#x0D;&#x0A;10.0.4.4/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="162" top="177" right="249" bottom="209" content="Loopback1:&#x0D;&#x0A;10.1.4.4/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="185" top="257" right="204" bottom="274" content=".4" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="187" top="374" right="206" bottom="391" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="216" top="319" right="311" bottom="336" content="10.0.14.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="237" top="397" right="256" bottom="414" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="407" top="398" right="426" bottom="415" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="293" top="395" right="388" bottom="412" content="10.0.12.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="479" top="396" right="498" bottom="413" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="617" top="396" right="636" bottom="413" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="511" top="396" right="606" bottom="413" content="10.0.23.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="415" top="441" right="502" bottom="473" content="Loopback0:&#x0D;&#x0A;10.0.2.2/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="173" top="444" right="260" bottom="476" content="Loopback0:&#x0D;&#x0A;10.0.1.1/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="631" top="441" right="718" bottom="473" content="Loopback0:&#x0D;&#x0A;10.0.3.3/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="646" top="374" right="665" bottom="391" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="642" top="255" right="661" bottom="272" content=".5" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="569" top="309" right="664" bottom="326" content="10.0.35.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="619" top="177" right="706" bottom="209" content="Loopback1:&#x0D;&#x0A;10.1.5.5/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="546" top="216" right="633" bottom="248" content="Loopback0:&#x0D;&#x0A;10.0.5.5/32" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="414" top="486" right="501" bottom="503" content="OSPF Area 0" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="413" top="331" right="477" bottom="348" content="AS 64512" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="202" top="143" right="266" bottom="160" content="AS 64513" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="600" top="144" right="664" bottom="161" content="AS 64514" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

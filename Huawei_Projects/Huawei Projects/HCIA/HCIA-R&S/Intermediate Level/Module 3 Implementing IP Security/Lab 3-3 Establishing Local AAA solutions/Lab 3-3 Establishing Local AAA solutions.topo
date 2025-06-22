@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="498B602A-FA38-45ff-B714-A4BF1DF72C6D" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-80-56-50" com_port="2000" bootmode="0" cx="74.000000" cy="198.000000" edit_left="101" edit_top="252">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="4970594F-02F4-4d60-8AD2-ACC26434FC07" name="119.84.111.0/24" poe="0" model="Cloud" settings="" system_mac="" com_port="0" bootmode="0" cx="262.500000" cy="182.500000" edit_left="307" edit_top="220">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="2" />
+                <interface sztype="Ethernet" interfacename="GE" count="0" />
+                <interface sztype="Serial" interfacename="Serial" count="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="1" remoteDisplayNo="2" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+                <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="2" remoteDisplayNo="1" adapterUid="" isOpen="0" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
+            </slot>
+        </dev>
+        <dev id="A7185BEE-F467-4ea1-9830-3B2565794FE3" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-9E-42-8B" com_port="2001" bootmode="0" cx="466.000000" cy="198.000000" edit_left="493" edit_top="252">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="498B602A-FA38-45ff-B714-A4BF1DF72C6D" destDeviceID="4970594F-02F4-4d60-8AD2-ACC26434FC07">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="144.183762" srcBoundRect_Y="225.000000" srcOffset_X="-7.000000" srcOffset_Y="1.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="240.603027" tarBoundRect_Y="225.000000" tarOffset_X="-44.000000" tarOffset_Y="4.000000" />
+        </line>
+        <line srcDeviceID="4970594F-02F4-4d60-8AD2-ACC26434FC07" destDeviceID="A7185BEE-F467-4ea1-9830-3B2565794FE3">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="369.396973" srcBoundRect_Y="225.000000" srcOffset_X="-20.000000" srcOffset_Y="6.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="449.816223" tarBoundRect_Y="225.000000" tarOffset_X="-23.000000" tarOffset_Y="5.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="127" top="200" right="146" bottom="217" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="443" top="203" right="462" bottom="220" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="248" top="305" right="380" bottom="322" content="AAA CONFIGURATION" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

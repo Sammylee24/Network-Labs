@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="445CF783-410B-46e8-89D3-BE6FC334937A" name="Head Office Switch" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-A6-05-AB" com_port="2003" bootmode="0" cx="641.000000" cy="163.000000" edit_left="668" edit_top="217">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="6B24EAFB-B7EC-4a27-8D1C-F30556D9F7C3" name="Data Center" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-42-76-8A -ipaddr 10.0.0.2 -ipmask 255.255.255.0 -gateway 10.0.0.1 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-42-76-8A" com_port="0" bootmode="0" cx="831.000000" cy="163.000000" edit_left="874" edit_top="213">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="B079293E-BDB6-4f73-BD4B-057A0A848315" name="Nkpolu" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-54-80-D9" com_port="2000" bootmode="0" cx="428.000000" cy="163.000000" edit_left="456" edit_top="148">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+        <dev id="01797F25-1042-4a22-A8C4-76A2BD570FD3" name="Aba" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-D4-6B-D1" com_port="2001" bootmode="0" cx="108.000000" cy="163.000000" edit_left="134" edit_top="148">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+        <dev id="A3B02E50-E219-4aee-B4B4-84502D7581F2" name="Enugu" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-B9-6C-65" com_port="2002" bootmode="0" cx="428.000000" cy="400.000000" edit_left="455" edit_top="454">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="01797F25-1042-4a22-A8C4-76A2BD570FD3" destDeviceID="B079293E-BDB6-4f73-BD4B-057A0A848315">
+            <interfacePair lineName="Serial" srcIndex="3" srcBoundRectIsMoved="1" srcBoundRect_X="178.183762" srcBoundRect_Y="190.000000" srcOffset_X="-10.000000" srcOffset_Y="5.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="411.816223" tarBoundRect_Y="190.000000" tarOffset_X="-45.000000" tarOffset_Y="3.000000" />
+        </line>
+        <line srcDeviceID="B079293E-BDB6-4f73-BD4B-057A0A848315" destDeviceID="A3B02E50-E219-4aee-B4B4-84502D7581F2">
+            <interfacePair lineName="Serial" srcIndex="4" srcBoundRectIsMoved="1" srcBoundRect_X="455.000000" srcBoundRect_Y="233.183762" srcOffset_X="-72.000000" srcOffset_Y="-1.000000" tarIndex="4" tarBoundRectIsMoved="1" tarBoundRect_X="455.000000" tarBoundRect_Y="383.816223" tarOffset_X="-63.000000" tarOffset_Y="-11.000000" />
+        </line>
+        <line srcDeviceID="B079293E-BDB6-4f73-BD4B-057A0A848315" destDeviceID="445CF783-410B-46e8-89D3-BE6FC334937A">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="0" srcBoundRect_X="498.183777" srcBoundRect_Y="190.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="624.816223" tarBoundRect_Y="190.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="6B24EAFB-B7EC-4a27-8D1C-F30556D9F7C3" destDeviceID="445CF783-410B-46e8-89D3-BE6FC334937A">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="814.816223" srcBoundRect_Y="190.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="711.183777" tarBoundRect_Y="190.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes>
+        <shape type="1" filloption="0" color="16744448" upleftcorner="468,122" width="371" height="150" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+        <shape type="1" filloption="0" color="4210816" upleftcorner="77,124" width="355" height="150" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+        <shape type="1" filloption="0" color="8388608" upleftcorner="380,203" width="147" height="311" startpt="0,0" endpt="0,0" borderStyle="2" borderWidth="3" />
+    </shapes>
+    <txttips>
+        <txttip left="80" top="37" right="394" bottom="101" content="1. Head office at Nkpolu&#x0D;&#x0A;2. Branch at Aba&#x0D;&#x0A;3. Branch at Enugu&#x0D;&#x0A;4. Data center 200m away from Head office" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="616" top="239" right="703" bottom="256" content="OSPF AREA 0" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="219" top="219" right="306" bottom="236" content="OSPF AREA 1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="407" top="475" right="494" bottom="492" content="OSPF AREA 2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="564" top="288" right="1142" bottom="555" content="OSPF is used to communicate via&#x0D;&#x0A;Nkpolu, Aba, and Enugu.&#x0D;&#x0A;&#x0D;&#x0A;Multiple-Area OSPF is used so as to reduce LSAs within branches.&#x0D;&#x0A;&#x0D;&#x0A;MPLS VPN is adopted as the WAN technology, which helps &#x0D;&#x0A;to reduce the look-up time, and also ensure some security.&#x0D;&#x0A;&#x0D;&#x0A;Serial Technology is used from Nkpolu to Aba, and Nkpolu to Enugu.&#x0D;&#x0A;Fiber Optics is used from the Head office to the Data center since&#x0D;&#x0A;it is just 200m away.&#x0D;&#x0A;&#x0D;&#x0A;LAN Technology is used within the Head office (Head office to Data center &#x0D;&#x0A;[assuming data center is within the premises of the Head office due to the &#x0D;&#x0A;distance] ).&#x0D;&#x0A;&#x0D;&#x0A;WAN Technology is used for inter-area communication." fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="236" top="164" right="323" bottom="181" content="10.0.1.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="364" top="323" right="451" bottom="340" content="10.0.2.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="483" top="171" right="502" bottom="188" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="409" top="212" right="428" bottom="229" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="403" top="173" right="422" bottom="190" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="164" top="175" right="183" bottom="192" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="458" top="378" right="477" bottom="395" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="814" top="173" right="833" bottom="190" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="499" top="133" right="586" bottom="150" content="HEAD OFFICE" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="620" top="147" right="707" bottom="164" content="10.0.0.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="271" top="552" right="532" bottom="569" content="DESIGN PLAN FOR BANK COMMUNICATION" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>

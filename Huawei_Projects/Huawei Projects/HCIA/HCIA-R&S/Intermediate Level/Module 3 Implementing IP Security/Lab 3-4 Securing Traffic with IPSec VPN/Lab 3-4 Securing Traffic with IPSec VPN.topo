@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="83C3A595-9E9D-409c-885C-6FA2DD833C3A" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-20-6F-DA" com_port="2000" bootmode="0" cx="39.000000" cy="211.000000" edit_left="66" edit_top="265">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+        </dev>
+        <dev id="D4290E53-66C5-493a-BF5F-AE1E0D74DD77" name="R3" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-C3-0B-8D" com_port="2002" bootmode="0" cx="532.000000" cy="211.000000" edit_left="559" edit_top="265">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="1" type="521" />
+        </dev>
+        <dev id="C28428CF-AF0E-4023-8589-12B393BBE119" name="R2" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-6C-69-29" com_port="2001" bootmode="0" cx="290.000000" cy="211.000000" edit_left="317" edit_top="265">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+                <interface sztype="Serial" interfacename="Serial" count="2" />
+            </slot>
+            <slot isMainBoard="0" id="0" type="521" />
+            <slot isMainBoard="0" id="1" type="521" />
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="83C3A595-9E9D-409c-885C-6FA2DD833C3A" destDeviceID="C28428CF-AF0E-4023-8589-12B393BBE119">
+            <interfacePair lineName="Serial" srcIndex="3" srcBoundRectIsMoved="1" srcBoundRect_X="109.183769" srcBoundRect_Y="238.000000" srcOffset_X="-10.000000" srcOffset_Y="4.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="273.816223" tarBoundRect_Y="238.000000" tarOffset_X="-42.000000" tarOffset_Y="6.000000" />
+        </line>
+        <line srcDeviceID="C28428CF-AF0E-4023-8589-12B393BBE119" destDeviceID="D4290E53-66C5-493a-BF5F-AE1E0D74DD77">
+            <interfacePair lineName="Serial" srcIndex="5" srcBoundRectIsMoved="1" srcBoundRect_X="360.183777" srcBoundRect_Y="238.000000" srcOffset_X="-11.000000" srcOffset_Y="6.000000" tarIndex="3" tarBoundRectIsMoved="1" tarBoundRect_X="515.816223" tarBoundRect_Y="238.000000" tarOffset_X="-42.000000" tarOffset_Y="5.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="245" top="319" right="385" bottom="336" content="IPSec VPN TOPOLOGY" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="93" top="212" right="112" bottom="229" content=".1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="268" top="214" right="287" bottom="231" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="344" top="215" right="363" bottom="232" content=".2" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="514" top="216" right="533" bottom="233" content=".3" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="143" top="212" right="238" bottom="229" content="10.0.12.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="392" top="215" right="487" bottom="232" content="10.0.23.0/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="6" top="172" right="191" bottom="204" content="Loopback0: 10.0.1.1/24&#x0D;&#x0A;Loopback1: 10.0.11.11/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="234" top="190" right="404" bottom="207" content="Loopback0: 10.0.2.2/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="441" top="172" right="626" bottom="204" content="Loopback0: 10.0.3.3/24&#x0D;&#x0A;Loopback1: 10.0.33.33/24" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+    </txttips>
+</topo>
